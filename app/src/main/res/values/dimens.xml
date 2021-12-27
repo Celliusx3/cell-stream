@@ -1,0 +1,82 @@
+<!--<resources>-->
+<!--	&lt;!&ndash; Default screen margins, per the Android Design guidelines. &ndash;&gt;-->
+<!--	<dimen name="activity_horizontal_margin">16dp</dimen>-->
+<!--	<dimen name="activity_vertical_margin">16dp</dimen>-->
+
+<!--	<dimen name="wrap_content">-3px</dimen>-->
+<!--	<dimen name="match_parent">-2px</dimen>-->
+
+<!--	<dimen name="margin_minus_xxs">-4dp</dimen>-->
+<!--	<dimen name="margin_zero">0dp</dimen>-->
+<!--	<dimen name="margin_xxxs">2dp</dimen>-->
+<!--	<dimen name="margin_xxs">4dp</dimen>-->
+<!--	<dimen name="margin_xs">8dp</dimen>-->
+<!--	<dimen name="margin_s">12dp</dimen>-->
+<!--	<dimen name="margin_m">16dp</dimen>-->
+<!--	<dimen name="margin_xm">21dp</dimen>-->
+<!--	<dimen name="margin_l">24dp</dimen>-->
+<!--	<dimen name="margin_xl">32dp</dimen>-->
+<!--	<dimen name="margin_xxl">40dp</dimen>-->
+<!--	<dimen name="margin_xxxl">48dp</dimen>-->
+<!--</resources>-->
+
+<resources>
+	<dimen name="wrap_content">-3px</dimen>
+	<dimen name="match_parent">-2px</dimen>
+
+	<dimen name="icon_s">12dp</dimen>
+	<dimen name="icon_m">16dp</dimen>
+	<dimen name="icon_xm">20dp</dimen>
+	<dimen name="icon_l">24dp</dimen>
+	<dimen name="icon_xl">28dp</dimen>
+	<dimen name="icon_xxl">42dp</dimen>
+	<dimen name="icon_xxxl">48dp</dimen>
+
+	<dimen name="no_margin">0dp</dimen>
+	<dimen name="margin_xxxxs">2dp</dimen>
+	<dimen name="margin_xxxs">4dp</dimen>
+	<dimen name="margin_xxs">6dp</dimen>
+	<dimen name="margin_xs">8dp</dimen>
+	<dimen name="margin_s">12dp</dimen>
+	<dimen name="margin_m">16dp</dimen>
+	<dimen name="margin_xm">18dp</dimen>
+	<dimen name="margin_xxm">20dp</dimen>
+	<dimen name="margin_l">24dp</dimen>
+	<dimen name="margin_xl">28dp</dimen>
+	<dimen name="margin_xxl">32dp</dimen>
+	<dimen name="margin_xxxl">36dp</dimen>
+	<dimen name="margin_xxxxl">40dp</dimen>
+	<dimen name="margin_xxxxxl">48dp</dimen>
+	<dimen name="margin_xxxxxxl">64dp</dimen>
+	<dimen name="margin_xxxxxxxl">78dp</dimen>
+	<dimen name="negative_margin_s">-12dp</dimen>
+	<dimen name="negative_margin_l">-24dp</dimen>
+	<dimen name="negative_margin_xxxxxl">-48dp</dimen>
+
+	<dimen name="giant_text_size">24sp</dimen>
+	<dimen name="extra_huge_text_size">22sp</dimen>
+	<dimen name="huge_text_size">20sp</dimen>
+	<dimen name="extra_large_text_size">17sp</dimen>
+	<dimen name="large_text_size">16sp</dimen>
+	<dimen name="medium_text_size">15sp</dimen>
+	<dimen name="small_text_size">14sp</dimen>
+	<dimen name="extra_small_text_size">13sp</dimen>
+	<dimen name="tiny_text_size">12sp</dimen>
+	<dimen name="extra_tiny_text_size">11sp</dimen>
+	<dimen name="mini_text_size">10sp</dimen>
+
+	<dimen name="no_corner_radius">0dp</dimen>
+	<dimen name="corner_radius_xxxs">4dp</dimen>
+	<dimen name="corner_radius_xs">8dp</dimen>
+	<dimen name="corner_radius_s">12dp</dimen>
+	<dimen name="corner_radius_xm">20dp</dimen>
+
+	<dimen name="image_width">146dp</dimen>
+	<dimen name="image_height">204dp</dimen>
+
+
+	<dimen name="elevation_zero">0dp</dimen>
+
+
+
+</resources>

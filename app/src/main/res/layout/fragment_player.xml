@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+	android:id="@+id/flVideoPlayerContainer"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<com.google.android.exoplayer2.ui.PlayerView
+		android:id="@+id/pvVideoPlayerPlayer"
+		android:layout_width="match_parent"
+		android:background="#000000"
+		app:surface_type="surface_view"
+		android:layout_height="match_parent" />
+
+	<TextView
+		android:id="@+id/tvVideoPlayerError"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:gravity="center"
+		android:textColor="@color/white"
+		android:layout_marginStart="24dp"
+		android:layout_marginEnd="24dp"
+		android:visibility="gone"
+		android:text = "Something's wrong with the source. Please try another channel/video."
+		tools:text="Something's wrong with the source. Please try another channel/video."/>
+
+	<ProgressBar
+		android:id="@+id/pbVideoPlayerLoading"
+		style="?android:attr/progressBarStyleLarge"
+		android:layout_width="48dp"
+		android:layout_height="48dp"
+		android:layout_gravity="center"
+		android:visibility="gone"
+		android:foregroundGravity="center" />
+
+	<FrameLayout
+		android:id="@+id/flVideoPlayerControls"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent" />
+
+</FrameLayout>

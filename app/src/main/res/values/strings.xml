@@ -1,0 +1,14 @@
+<resources>
+	<string name="app_name">CellStream</string>
+	<string name="title_main">Main</string>
+	<string name="title_home">Home</string>
+	<string name="title_settings">Settings</string>
+	<string name="title_player">Player</string>
+	<string name="title_details">Details</string>
+	<string name="episodes">Episodes</string>
+	<string name="genres">Genres</string>
+	<string name="synopsis">Synopsis</string>
+	<string name="source">Source</string>
+
+
+</resources>

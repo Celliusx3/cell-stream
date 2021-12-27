@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlPlayerControlsContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/video_player_control_background">
+
+    <!--This is the top bar of the main player controller-->
+    <!--It has back button-->
+    <LinearLayout
+        android:id="@+id/player_controls_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/player_controls_bar_height"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <ImageButton
+            android:id="@+id/ivPlayerControlsBack"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="@dimen/player_controls_bar_height"
+            android:layout_height="@dimen/player_controls_bar_height"
+            app:tint="@color/white"
+            android:src="@drawable/ic_back_black_24dp" />
+
+        <TextView
+            android:id="@+id/tvPlayerControlsTitle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/margin_m"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:lines="1"
+            tools:text="Lorem ipsum"
+            android:textColor="@color/white"/>
+
+        <ImageButton
+            android:id="@+id/ivPlayerControlsMore"
+            android:layout_width="@dimen/player_controls_bar_height"
+            android:layout_height="@dimen/player_controls_bar_height"
+            style="?android:attr/borderlessButtonStyle"
+            app:tint="@color/white"
+            android:gravity="end"
+            android:src="@drawable/ic_more_vert_white_24dp" />
+
+    </LinearLayout>
+
+    <!--This Container holds the mail player controls that interact with the player-->
+    <!--This is the center bar of the player controls with play/pause, rewind and forward-->
+    <LinearLayout
+        android:id="@+id/llPlayerControlsCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivPlayerControlsRewind"
+            android:layout_width="@dimen/btn_rw_width"
+            android:layout_height="@dimen/btn_rw_height"
+            android:layout_marginStart="@dimen/margin_center_btn"
+            android:layout_marginEnd="@dimen/margin_center_btn"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onClick"
+            android:layout_gravity="center_vertical"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_video_player_fast_rewind_white_24dp" />
+
+        <ImageView
+            android:id="@+id/ivPlayerControlsPlayPause"
+            android:layout_width="@dimen/btn_pause_width"
+            android:layout_height="@dimen/btn_pause_height"
+            android:layout_marginStart="@dimen/margin_center_btn"
+            android:layout_marginEnd="@dimen/margin_center_btn"
+            android:clickable="true"
+            android:layout_gravity="center_vertical"
+            android:onClick="onClick"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_video_player_pause_white_24dp" />
+
+        <ImageView
+            android:id="@+id/ivPlayerControlsForward"
+            android:layout_width="@dimen/btn_ff_width"
+            android:layout_height="@dimen/btn_ff_height"
+            android:layout_marginStart="@dimen/margin_center_btn"
+            android:layout_marginEnd="@dimen/margin_center_btn"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_gravity="center_vertical"
+            android:onClick="onClick"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_video_player_fast_forward_white_24dp" />
+
+    </LinearLayout>
+
+    <!--This is the bottom bar of the player controls with seek, fullscreen and volume buttons-->
+    <LinearLayout
+        android:id="@+id/llPlayerControlsBtmBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/player_controls_bar_height"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/player_controls_element_padding_large"
+        android:paddingRight="@dimen/player_controls_element_padding_large">
+
+        <TextView
+            android:id="@+id/tvPlayerControlsCurrentTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_m"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="00:00"
+            android:textColor="@color/white"/>
+
+        <SeekBar
+            android:id="@+id/sbPlayerControlsSeekBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/margin_m"
+            android:foregroundGravity="center_vertical"
+            android:max="100"
+            android:maxHeight="@dimen/player_controls_seekbar_line_height"
+            android:progressDrawable="@drawable/seekbar_progress_drawable"
+            android:thumb="@drawable/seekbar_thumb" />
+
+        <TextView
+            android:id="@+id/tvPlayerControlsTimeLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_m"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="00:00"
+            android:textColor="@color/white" />
+
+        <ImageButton
+            android:id="@+id/ivPlayerControlsFullScreen"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="@dimen/player_controls_bar_height"
+            android:layout_height="@dimen/player_controls_bar_height"
+            android:src="@drawable/ic_video_player_fullscreen_white_24dp" />
+
+        <ImageButton
+            android:id="@+id/ivPlayerControlsVolume"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="@dimen/player_controls_bar_height"
+            android:layout_height="@dimen/player_controls_bar_height"
+            android:src="@drawable/ic_volume_white_24dp" />
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<androidx.appcompat.widget.Toolbar
+		android:id="@+id/tbHomeToolbar"
+		android:layout_width="match_parent"
+		android:layout_height="?attr/actionBarSize"/>
+
+	<androidx.coordinatorlayout.widget.CoordinatorLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<androidx.core.widget.NestedScrollView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:fillViewport="true"
+			android:scrollbars="none">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical">
+
+				<LinearLayout
+					android:id="@+id/llSettingsSource"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:background="?attr/selectableItemBackground"
+					android:focusable="true"
+					android:orientation="horizontal"
+					android:padding = "16dp"
+					android:paddingStart="12dp"
+					android:paddingEnd="12dp">
+
+					<ImageView
+						android:src="@drawable/ic_image_24dp"
+						android:layout_width="24dp"
+						android:layout_gravity="center_vertical"
+						android:layout_marginEnd="8dp"
+						android:layout_height="24dp" />
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:orientation="vertical">
+
+						<TextView
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:text="@string/source"
+							android:textSize="16sp"
+							android:maxLines="1" />
+
+						<TextView
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							tools:text="GogoAnime"
+							android:id="@+id/tvSettingsSource"
+							android:textSize="12sp"
+							android:maxLines="1" />
+
+					</LinearLayout>
+
+				</LinearLayout>
+			</LinearLayout>
+		</androidx.core.widget.NestedScrollView>
+	</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>

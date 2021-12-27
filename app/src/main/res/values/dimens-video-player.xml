@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="btn_back_height">20dp</dimen>
+    <dimen name="btn_back_width">12dp</dimen>
+
+    <dimen name="btn_play_height">56dp</dimen>
+    <dimen name="btn_play_width">56dp</dimen>
+
+    <dimen name="btn_pause_height">56dp</dimen>
+    <dimen name="btn_pause_width">56dp</dimen>
+
+    <dimen name="btn_ff_height">48dp</dimen>
+    <dimen name="btn_ff_width">48dp</dimen>
+
+    <dimen name="btn_rw_height">48dp</dimen>
+    <dimen name="btn_rw_width">48dp</dimen>
+
+    <dimen name="btn_sound_height">15dp</dimen>
+    <dimen name="btn_sound_width">14dp</dimen>
+
+    <dimen name="btn_fullscreen_height">14dp</dimen>
+    <dimen name="btn_fullscreen_width">14dp</dimen>
+
+    <dimen name="margin_center_btn">@dimen/margin_l</dimen>
+
+    <dimen name="player_controls_seekbar_line_height">4dp</dimen>
+    <dimen name="player_controls_seekbar_thumb_size">16dp</dimen>
+    <dimen name="player_controls_bar_height">50dp</dimen>
+    <dimen name="player_controls_element_padding_large">@dimen/margin_m</dimen>
+    <dimen name="embedded_video_player_height">201dp</dimen>
+
+    <dimen name="home_player_volume_width">18dp</dimen>
+    <dimen name="home_player_volume_height">18dp</dimen>
+</resources>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+	<!-- Base application theme. -->
+	<style name="Theme.CellStream.Base" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+		<item name="bottomSheetDialogTheme">@style/Theme.BottomSheet</item>
+		<item name="appBarLayoutStyle">@style/Theme.AppBar</item>
+	</style>
+
+	<style name="Theme.Widget.SpinnerItem" parent="Widget.AppCompat.DropDownItem.Spinner"/>
+
+	<style name="Theme.Widget.Chip" parent="Widget.MaterialComponents.Chip.Entry">
+		<item name="chipBackgroundColor">@color/transparent</item>
+		<item name="chipSurfaceColor">@color/transparent</item>
+		<item name="chipStrokeWidth">1dp</item>
+		<item name="chipStrokeColor">?attr/colorPrimary</item>
+		<item name="checkedIconVisible">false</item>
+		<item name="shapeAppearanceOverlay">@null</item>
+		<item name="closeIconVisible">false</item>
+	</style>
+
+	<style name="Theme.AppBar" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar">
+		<item name="android:background">@color/transparent</item>
+	</style>
+
+	<!--===========-->
+	<!--BottomSheet-->
+	<!--===========-->
+
+	<style name="Theme.BottomSheet" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
+		<item name="bottomSheetStyle">@style/Theme.BottomSheet.Style</item>
+	</style>
+
+	<style name="Theme.BottomSheet.Style" parent="Widget.MaterialComponents.BottomSheet">
+		<item name="shapeAppearanceOverlay">@style/Theme.BottomSheet.Style.ShapeAppearance</item>
+	</style>
+
+	<style name="Theme.BottomSheet.Style.ShapeAppearance" parent="">
+		<item name="cornerFamily">rounded</item>
+		<item name="cornerSizeTopRight">8dp</item>
+		<item name="cornerSizeTopLeft">8dp</item>
+		<item name="cornerSizeBottomRight">0dp</item>
+		<item name="cornerSizeBottomLeft">0dp</item>
+	</style>
+
+</resources>

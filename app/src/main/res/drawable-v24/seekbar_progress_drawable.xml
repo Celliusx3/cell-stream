@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/secondaryProgress">
+        <shape>
+            <corners android:radius="5dip" />
+            <solid android:color="#707070" />
+            <size android:height="@dimen/player_controls_seekbar_line_height"
+                android:width="@dimen/match_parent"/>
+        </shape>
+    </item>
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <corners android:radius="5dip" />
+                <solid android:color="@color/white" />
+                <size android:height="@dimen/player_controls_seekbar_line_height" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>

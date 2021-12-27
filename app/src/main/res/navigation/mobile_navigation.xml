@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/mobile_navigation"
+	app:startDestination="@+id/navigation_main">
+
+	<action android:id="@+id/action_to_navigation_player"
+		app:destination="@id/navigation_player"
+		app:enterAnim="@anim/enter_anim"
+		app:exitAnim="@anim/exit_anim"
+		app:popEnterAnim="@anim/pop_enter_anim"
+		app:popExitAnim="@anim/pop_exit_anim">
+		<argument
+			android:name="extra_details"
+			app:argType="string"
+			android:defaultValue="@null" />
+	</action>
+
+	<action android:id="@+id/action_to_navigation_details"
+		app:destination="@id/navigation_details"
+		app:enterAnim="@anim/enter_anim"
+		app:exitAnim="@anim/exit_anim"
+		app:popEnterAnim="@anim/pop_enter_anim"
+		app:popExitAnim="@anim/pop_exit_anim">
+		<argument
+			android:name="extra_details"
+			app:argType="string"
+			android:defaultValue="@null" />
+	</action>
+
+	<fragment
+		android:id="@+id/navigation_main"
+		android:name="com.cellstudio.cellstream.ui.presentations.main.MainFragment"
+		android:label="@string/title_main"
+		tools:layout="@layout/fragment_main" />
+
+	<fragment
+		android:id="@+id/navigation_settings"
+		android:name="com.cellstudio.cellstream.ui.presentations.settings.SettingsFragment"
+		android:label="@string/title_settings"
+		tools:layout="@layout/fragment_settings" />
+
+	<fragment
+		android:id="@+id/navigation_player"
+		android:name="com.cellstudio.cellstream.ui.presentations.player.PlayerFragment"
+		android:label="@string/title_player"
+		tools:layout="@layout/fragment_player"/>
+
+	<fragment
+		android:id="@+id/navigation_details"
+		android:name="com.cellstudio.cellstream.ui.presentations.details.DetailsFragment"
+		android:label="@string/title_details"
+		tools:layout="@layout/fragment_details"/>
+</navigation>

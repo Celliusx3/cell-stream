@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="horizontal"
+	android:paddingHorizontal="@dimen/margin_s"
+	android:gravity="center_vertical"
+	android:background = "?attr/selectableItemBackground">
+
+	<androidx.appcompat.widget.AppCompatTextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/tvActionName"
+		android:paddingVertical="@dimen/margin_xm"
+		android:ellipsize="end"/>
+
+</LinearLayout>
