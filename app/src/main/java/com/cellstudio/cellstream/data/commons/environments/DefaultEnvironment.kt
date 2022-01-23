@@ -4,14 +4,13 @@ import com.cellstudio.cellstream.data.base.repositories.source.SourceRepository
 import com.cellstudio.cellstream.data.services.network.NetworkService
 import com.cellstudio.cellstream.data.services.storage.StorageService
 import com.cellstudio.cellstream.data.services.storage.StorageServiceConstants
-import com.cellstudio.cellstream.data.source.full.cableav.repositories.CableAVRepository
-import com.cellstudio.cellstream.data.source.full.gimy.repositories.GimyRepository
+import com.cellstudio.cellstream.data.source.example.gogoanime.repositories.GogoAnimeRepository
 import com.cellstudio.cellstream.data.source.example.olevod.repositories.OlevodRepository
-import com.cellstudio.cellstream.data.source.full.sexkbj.repositories.SexKbjRepository
 
 class DefaultEnvironment(networkService: NetworkService, private val storageService: StorageService) : Environment {
     override val dataSources: List<SourceRepository> = listOf(
-        OlevodRepository(networkService)
+        OlevodRepository(networkService),
+        GogoAnimeRepository(networkService)
     )
 
     private val _selectedDataSource = this.dataSources.find {

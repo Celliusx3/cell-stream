@@ -3,6 +3,8 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
+    id 'kotlinx-serialization'
+
 }
 
 android {
@@ -73,6 +75,6 @@ dependencies {
     // SwipeRefreshLayout
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
 
-
-
+    // Json
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.2"
 }

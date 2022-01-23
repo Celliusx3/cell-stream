@@ -34,13 +34,6 @@
 		android:name="com.cellstudio.cellstream.ui.presentations.main.MainFragment"
 		android:label="@string/title_main"
 		tools:layout="@layout/fragment_main" />
-
-	<fragment
-		android:id="@+id/navigation_settings"
-		android:name="com.cellstudio.cellstream.ui.presentations.settings.SettingsFragment"
-		android:label="@string/title_settings"
-		tools:layout="@layout/fragment_settings" />
-
 	<fragment
 		android:id="@+id/navigation_player"
 		android:name="com.cellstudio.cellstream.ui.presentations.player.PlayerFragment"

@@ -15,6 +15,7 @@ abstract class BaseViewModel(protected val stateHandle: SavedStateHandle) : andr
             try {
                 apiCall.invoke()
             } catch (e: Exception) {
+                e.printStackTrace()
                 null
             }
         }

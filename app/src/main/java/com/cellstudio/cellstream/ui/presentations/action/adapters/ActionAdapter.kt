@@ -5,14 +5,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.cellstudio.cellstream.databinding.ItemActionBinding
+import com.cellstudio.cellstream.databinding.ItemLayoutActionBinding
 import com.cellstudio.cellstream.ui.presentations.action.models.ActionModel
 
 class ActionAdapter(var models: List<ActionModel>): RecyclerView.Adapter<RecyclerView.ViewHolder>(){
     var listener: Listener?= null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        val binding = ItemActionBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = ItemLayoutActionBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ItemViewHolder(binding, listener)
     }
 
@@ -24,7 +24,7 @@ class ActionAdapter(var models: List<ActionModel>): RecyclerView.Adapter<Recycle
         }
     }
 
-    class ItemViewHolder(binding: ItemActionBinding, private val listener: Listener?) : RecyclerView.ViewHolder(binding.root) {
+    class ItemViewHolder(binding: ItemLayoutActionBinding, private val listener: Listener?) : RecyclerView.ViewHolder(binding.root) {
         private val title: TextView = binding.tvActionName
         fun bind(info: ActionModel) {
             title.text = info.title

@@ -5,9 +5,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.viewModelScope
 import com.cellstudio.cellstream.data.base.models.entities.Filter
-import com.cellstudio.cellstream.data.base.models.request.VideoListRequest
+import com.cellstudio.cellstream.data.base.models.request.VideosRequest
 import com.cellstudio.cellstream.data.base.models.response.VideoResponse
-import com.cellstudio.cellstream.data.base.repositories.config.ConfigRepository
 import com.cellstudio.cellstream.data.base.repositories.source.SourceRepository
 import com.cellstudio.cellstream.ui.presentations.base.viewModel.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -44,7 +43,7 @@ class DefaultHomeViewModel @Inject constructor(private val sourceRepository: Sou
                 } else {
                     _paginationLoading.value = true
                 }
-                val request = VideoListRequest(genre = selectedFilter?.id, page = nextPage)
+                val request = VideosRequest(genre = selectedFilter?.id, page = nextPage)
                 val response = safeApiCall { sourceRepository.getHome(request) }
                 response?.let { addVideos(page <= 1, it) }
                 nextPage += 1

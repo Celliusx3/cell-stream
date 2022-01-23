@@ -1,4 +1,4 @@
-package com.cellstudio.cellmovie.player
+package com.cellstudio.cellstream.player
 
 import android.content.Context
 import android.net.Uri
@@ -6,11 +6,9 @@ import android.util.Log
 import android.view.SurfaceView
 import com.cellstudio.cellstream.player.models.CellPlayerPlaySpeed
 import com.cellstudio.cellstream.player.models.QualityLevel
-import com.cellstudio.cellstream.player.CellPlayer
 import com.google.android.exoplayer2.*
 import com.google.android.exoplayer2.drm.DrmSessionManager
-import com.google.android.exoplayer2.ext.cast.CastPlayer
-import com.google.android.exoplayer2.ext.cast.SessionAvailabilityListener
+import com.google.android.exoplayer2.source.DefaultMediaSourceFactory
 import com.google.android.exoplayer2.source.MediaSource
 import com.google.android.exoplayer2.source.ProgressiveMediaSource
 import com.google.android.exoplayer2.source.TrackGroupArray
@@ -25,7 +23,6 @@ import com.google.android.exoplayer2.ui.PlayerView
 import com.google.android.exoplayer2.upstream.*
 import com.google.android.exoplayer2.util.MimeTypes
 import com.google.android.exoplayer2.util.Util
-import com.google.android.gms.cast.framework.CastContext
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
@@ -90,9 +87,10 @@ class ExoCellPlayer: CellPlayer {
         }
     }
 
-    override fun play(url: String) {
+    override fun play(url: String, extension: String?) {
         val uri = Uri.parse(url)
-        val videoSource = createCleanDataSource(uri, "", DrmSessionManager.DRM_UNSUPPORTED, dataSourceFactory!!)
+//        val videoSource = DefaultMediaSourceFactory(dataSourceFactory!!).createMediaSource(MediaItem.fromUri(uri))
+        val videoSource = createCleanDataSource(uri, extension?:"", DrmSessionManager.DRM_UNSUPPORTED, dataSourceFactory!!)
         player?.prepare(videoSource)
         player?.playWhenReady = true
 //        val castContext = CastContext.getSharedInstance(context!!)

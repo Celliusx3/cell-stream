@@ -5,6 +5,7 @@ import android.content.Context
 import android.util.DisplayMetrics
 import android.view.View
 import android.view.WindowManager
+import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 
@@ -164,5 +165,15 @@ object UIVisibilityUtils {
                         or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
                 ) // or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
         // window.clearFlags(View.KEEP_SCREEN_ON)
+    }
+
+    fun hideKeyboard(view: View) {
+        val inputMethodManager = view.context.getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager?
+        inputMethodManager?.hideSoftInputFromWindow(view.windowToken, 0)
+    }
+
+    fun showKeyboard(view: View) {
+        val inputMethodManager = view.context.getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager?
+        inputMethodManager?.showSoftInput(view, 0)
     }
 }

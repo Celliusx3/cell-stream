@@ -10,7 +10,7 @@ import com.google.android.exoplayer2.ui.PlayerView
 interface CellPlayer {
     fun init(context: Context, playerView: PlayerView)
 
-    fun play(url: String)
+    fun play(url: String, extension: String?)
     fun play()
     fun seekTo(position: Long)
     fun seekBy(position: Long)

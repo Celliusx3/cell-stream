@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<androidx.appcompat.widget.SearchView
+		android:id="@+id/svSearchSearch"
+		app:queryBackground="@color/transparent"
+		app:searchIcon="@drawable/ic_search_black_24dp"
+		app:iconifiedByDefault="false"
+		app:queryHint="@string/title_search"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"/>
+
+	<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+		android:id="@+id/srlSearch"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+		<androidx.recyclerview.widget.RecyclerView
+			android:id="@+id/rvSearchResults"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"/>
+
+	</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

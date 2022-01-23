@@ -1,4 +1,4 @@
-package com.cellstudio.cellstream.ui.adapters.home
+package com.cellstudio.cellstream.ui.presentations.search.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,10 +6,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.cellstudio.cellstream.data.base.models.response.VideoResponse
-import com.cellstudio.cellstream.databinding.ItemLayoutHomeBinding
+import com.cellstudio.cellstream.databinding.ItemLayoutSearchBinding
 import com.cellstudio.cellstream.ui.utilities.ImageUtils
 
-class HomeAdapter(private var models: List<VideoResponse>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class SearchAdapter(private var models: List<VideoResponse>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     var listener: Listener?= null
     private var loadingData = false
@@ -31,7 +31,7 @@ class HomeAdapter(private var models: List<VideoResponse>) : RecyclerView.Adapte
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        val binding = ItemLayoutHomeBinding.inflate(LayoutInflater.from(parent.context))
+        val binding = ItemLayoutSearchBinding.inflate(LayoutInflater.from(parent.context))
         return ItemViewHolder(binding, listener)
     }
 
@@ -51,9 +51,9 @@ class HomeAdapter(private var models: List<VideoResponse>) : RecyclerView.Adapte
         fun onItemClicked(model: VideoResponse)
     }
 
-    class ItemViewHolder(binding: ItemLayoutHomeBinding, private val listener: Listener?) : RecyclerView.ViewHolder(binding.root) {
-        private val title: TextView = binding.tvHomeTitle
-        private val image: ImageView = binding.ivHomeImage
+    class ItemViewHolder(binding: ItemLayoutSearchBinding, private val listener: Listener?) : RecyclerView.ViewHolder(binding.root) {
+        private val title: TextView = binding.tvSearchTitle
+        private val image: ImageView = binding.ivSearchImage
         fun bind(info: VideoResponse) {
             title.text = info.title
             itemView.setOnClickListener { listener?.onItemClicked(info) }

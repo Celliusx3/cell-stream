@@ -16,8 +16,8 @@ class DefaultPlayerViewModel @Inject constructor(private val sourceRepository: S
     private val id = stateHandle.get<String>(PlayerFragment.EXTRA_DETAILS)
 
     private val _videoDetails: MutableLiveData<EpisodeDetailsResponse> = MutableLiveData()
-    override val url: LiveData<String> = Transformations.map(_videoDetails) {
-        it.url
+    override val episodeData: LiveData<Pair<String, String?>> = Transformations.map(_videoDetails) {
+        Pair(it.url, it.extension)
     }
 
     init {

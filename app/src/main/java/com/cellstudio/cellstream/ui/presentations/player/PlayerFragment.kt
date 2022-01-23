@@ -7,9 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.viewModels
-import com.cellstudio.cellmovie.player.ExoCellPlayer
+import com.cellstudio.cellstream.player.ExoCellPlayer
 import com.cellstudio.cellstream.databinding.FragmentPlayerBinding
 import com.cellstudio.cellstream.player.CellPlayer
 import com.cellstudio.cellstream.player.models.CellPlayerPlaySpeed
@@ -22,11 +21,8 @@ import com.cellstudio.cellstream.ui.presentations.action.models.ActionModel
 import com.cellstudio.cellstream.ui.presentations.base.BaseFragment
 import com.cellstudio.cellstream.ui.presentations.player.models.PlayerSpeedModel
 import com.cellstudio.cellstream.ui.presentations.player.viewModel.DefaultPlayerViewModel
-import com.cellstudio.cellstream.ui.presentations.settings.models.SourceModel
-import com.cellstudio.cellstream.ui.utilities.DialogUtils
 import com.cellstudio.cellstream.ui.utilities.UIVisibilityUtils
 import com.cellstudio.cellstream.ui.utilities.UIVisibilityUtils.hideSystemUI
-import com.cellstudio.cellstream.ui.utilities.UIVisibilityUtils.showSystemUI
 import com.google.android.exoplayer2.PlaybackException
 import com.google.android.exoplayer2.ui.AspectRatioFrameLayout
 import dagger.hilt.android.AndroidEntryPoint
@@ -63,9 +59,9 @@ class PlayerFragment : BaseFragment<FragmentPlayerBinding>() {
         detailsId = this.arguments?.getString(EXTRA_DETAILS)?: ""
     }
 
-    private fun setUrl(url: String) {
+    private fun setUrl(url: String, extension: String?) {
         this.url = url
-        videoPlayer.play(url)
+        videoPlayer.play(url, extension)
     }
 
     private fun setTitle(title: String) {
@@ -84,7 +80,7 @@ class PlayerFragment : BaseFragment<FragmentPlayerBinding>() {
 
     override fun onBindData(view: View) {
         super.onBindData(view)
-        viewModel.url.observe(viewLifecycleOwner) { setUrl(it) }
+        viewModel.episodeData.observe(viewLifecycleOwner) { setUrl(it.first, it.second) }
 
         disposable.add(pressPlayButtonSubject.subscribe { videoPlayer.play() })
         disposable.add(pressPauseButtonSubject.subscribe { videoPlayer.pause() })

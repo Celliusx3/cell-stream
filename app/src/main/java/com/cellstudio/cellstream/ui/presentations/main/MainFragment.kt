@@ -11,6 +11,7 @@ import com.cellstudio.cellstream.ui.presentations.base.BaseFragment
 import com.cellstudio.cellstream.ui.presentations.home.HomeFragment
 import com.cellstudio.cellstream.ui.presentations.main.adapters.MainFragmentStateAdapter
 import com.cellstudio.cellstream.ui.presentations.main.viewModel.DefaultMainViewModel
+import com.cellstudio.cellstream.ui.presentations.search.SearchFragment
 import com.cellstudio.cellstream.ui.presentations.settings.SettingsFragment
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -36,7 +37,7 @@ class MainFragment : BaseFragment<FragmentMainBinding>(){
         binding?.vpMain?.isUserInputEnabled = false
 
         // Set viewpager adapter
-        binding?.vpMain?.adapter = MainFragmentStateAdapter(listOf(HomeFragment(), SettingsFragment()), childFragmentManager, viewLifecycleOwner.lifecycle)
+        binding?.vpMain?.adapter = MainFragmentStateAdapter(listOf(HomeFragment(), SearchFragment(), SettingsFragment()), childFragmentManager, viewLifecycleOwner.lifecycle)
 
         // Listen bottom navigation tabs change
         binding?.bnvMain?.setOnItemSelectedListener {
@@ -45,9 +46,12 @@ class MainFragment : BaseFragment<FragmentMainBinding>(){
                     binding?.vpMain?.setCurrentItem(0, false)
                     return@setOnItemSelectedListener true
                 }
-
-                R.id.navigation_settings -> {
+                R.id.navigation_search -> {
                     binding?.vpMain?.setCurrentItem(1, false)
+                    return@setOnItemSelectedListener true
+                }
+                R.id.navigation_settings -> {
+                    binding?.vpMain?.setCurrentItem(2, false)
                     return@setOnItemSelectedListener true
                 }
             }
