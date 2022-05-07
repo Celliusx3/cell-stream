@@ -1,6 +1,5 @@
 package com.cellstudio.cellstream.ui.presentations.search.viewModel
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.SavedStateHandle
@@ -43,10 +42,9 @@ class DefaultSearchViewModel @Inject constructor(private val sourceRepository: S
     }
 
     private fun onGetSearchResults() {
-        Log.d("Testing", "GGNot")
         viewModelScope.launch {
             query.value?.let {
-                nextPage?.let { page ->
+                nextPage.let { page ->
                     if (page <= 1) {
                         _refreshLoading.value = true
                     } else {

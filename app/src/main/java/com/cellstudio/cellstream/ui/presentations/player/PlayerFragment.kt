@@ -181,8 +181,6 @@ class PlayerFragment : BaseFragment<FragmentPlayerBinding>() {
         override fun onMuteChanged(isMuted: Boolean) { mutePlayer(isMuted) }
         override fun onFullScreenIconPressed(isFullScreen: Boolean) { pressFullScreenButtonSubject.onNext(isFullScreen) }
         override fun onMorePressed() {
-//            DialogUtils.showDialog(requireContext(), PlayerSpeedModel.values().toList())
-//            Log.d("Test", "onMorePressed")
             getVideoPlayerSpeedFragment().show(childFragmentManager, null)
         }
     }

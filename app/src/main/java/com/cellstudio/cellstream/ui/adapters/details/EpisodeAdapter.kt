@@ -20,7 +20,7 @@ class EpisodeAdapter(private var models:List<EpisodeResponse>): RecyclerView.Ada
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        val binding = ItemLayoutEpisodeBinding.inflate(LayoutInflater.from(parent.context))
+        val binding = ItemLayoutEpisodeBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ItemViewHolder(binding, listener)
     }
 

@@ -7,10 +7,9 @@
 	android:layout_height="match_parent"
 	android:orientation="vertical">
 
-	<androidx.appcompat.widget.Toolbar
-		android:id="@+id/tbHomeToolbar"
-		android:layout_width="match_parent"
-		android:layout_height="?attr/actionBarSize"/>
+	<include
+		android:id="@+id/tbSettings"
+		layout="@layout/item_layout_toolbar" />
 
 	<androidx.coordinatorlayout.widget.CoordinatorLayout
 		android:layout_width="match_parent"

@@ -22,7 +22,7 @@ class DefaultDetailsViewModel @Inject constructor(private val sourceRepository: 
     override val isShowSynopsis: LiveData<Boolean> = Transformations.map(_details) { !it.synopsis.isNullOrEmpty() }
     override val tags: LiveData<List<Genre>> = Transformations.map(_details) { it.genres?: listOf() }
     override val isShowTags: LiveData<Boolean> = Transformations.map(_details) { !it.genres.isNullOrEmpty() }
-    override val episodes: LiveData<List<EpisodeResponse>> = Transformations.map(_details) { it.episodes }
+    override val episodes: LiveData<List<EpisodeResponse>> = Transformations.map(_details) { it.episodes?: listOf() }
     private val _navigateToPlayer: MutableSharedFlow<String> = MutableSharedFlow()
     override val navigateToPlayer: SharedFlow<String> = _navigateToPlayer
     private var id: String?= stateHandle.get(DetailsFragment.EXTRA_DETAILS)

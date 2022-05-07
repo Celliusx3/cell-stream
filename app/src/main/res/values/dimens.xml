@@ -1,25 +1,3 @@
-<!--<resources>-->
-<!--	&lt;!&ndash; Default screen margins, per the Android Design guidelines. &ndash;&gt;-->
-<!--	<dimen name="activity_horizontal_margin">16dp</dimen>-->
-<!--	<dimen name="activity_vertical_margin">16dp</dimen>-->
-
-<!--	<dimen name="wrap_content">-3px</dimen>-->
-<!--	<dimen name="match_parent">-2px</dimen>-->
-
-<!--	<dimen name="margin_minus_xxs">-4dp</dimen>-->
-<!--	<dimen name="margin_zero">0dp</dimen>-->
-<!--	<dimen name="margin_xxxs">2dp</dimen>-->
-<!--	<dimen name="margin_xxs">4dp</dimen>-->
-<!--	<dimen name="margin_xs">8dp</dimen>-->
-<!--	<dimen name="margin_s">12dp</dimen>-->
-<!--	<dimen name="margin_m">16dp</dimen>-->
-<!--	<dimen name="margin_xm">21dp</dimen>-->
-<!--	<dimen name="margin_l">24dp</dimen>-->
-<!--	<dimen name="margin_xl">32dp</dimen>-->
-<!--	<dimen name="margin_xxl">40dp</dimen>-->
-<!--	<dimen name="margin_xxxl">48dp</dimen>-->
-<!--</resources>-->
-
 <resources>
 	<dimen name="wrap_content">-3px</dimen>
 	<dimen name="match_parent">-2px</dimen>
@@ -74,8 +52,10 @@
 	<dimen name="image_width">146dp</dimen>
 	<dimen name="image_height">204dp</dimen>
 
-
 	<dimen name="elevation_zero">0dp</dimen>
+
+	<string name="portrait_image">W,1:1.4</string>
+	<string name="landscape_image">W,1.4:1</string>
 
 
 

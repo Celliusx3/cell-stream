@@ -1,7 +1,6 @@
 package com.cellstudio.cellstream.ui.presentations.action
 
 import android.os.Bundle
-import android.view.ActionMode
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,14 +8,10 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.cellstudio.cellstream.databinding.FragmentActionBinding
-import com.cellstudio.cellstream.databinding.FragmentDetailsBinding
 import com.cellstudio.cellstream.ui.presentations.action.adapters.ActionAdapter
 import com.cellstudio.cellstream.ui.presentations.action.models.ActionModel
 import com.cellstudio.cellstream.ui.presentations.action.viewModel.DefaultActionViewModel
 import com.cellstudio.cellstream.ui.presentations.base.BaseBottomSheetDialogFragment
-import com.cellstudio.cellstream.ui.presentations.base.viewModel.ViewModel
-import com.cellstudio.cellstream.ui.presentations.settings.viewModel.DefaultSettingsViewModel
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

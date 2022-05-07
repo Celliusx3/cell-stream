@@ -57,6 +57,7 @@ class HomeAdapter(private var models: List<VideoResponse>) : RecyclerView.Adapte
         fun bind(info: VideoResponse) {
             title.text = info.title
             itemView.setOnClickListener { listener?.onItemClicked(info) }
+
             ImageUtils.setImageUri(image, info.image)
         }
     }

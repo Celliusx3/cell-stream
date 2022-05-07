@@ -7,6 +7,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.asLiveData
 import com.cellstudio.cellstream.MainActivity
+import com.cellstudio.cellstream.R
 import com.cellstudio.cellstream.databinding.FragmentSettingsBinding
 import com.cellstudio.cellstream.ui.presentations.action.ActionFragment
 import com.cellstudio.cellstream.ui.presentations.action.models.ActionModel
@@ -38,6 +39,8 @@ class SettingsFragment : BaseFragment<FragmentSettingsBinding>() {
     }
 
     override fun onBindView(view: View, savedInstanceState: Bundle?) {
+        binding?.tbSettings?.toolbar?.title = getString(R.string.title_settings)
+
         binding?.tvSettingsSource?.text = viewModel.source
         binding?.llSettingsSource?.setOnClickListener {
             val fragment = ActionFragment()
